@@ -1,0 +1,9 @@
+version: '3.1'
+services:
+  api:
+    build: .
+    container_name: twitter_bot_api
+    ports:
+      - 8080:8000
+    working_dir: /api
+    command: "uvicorn main:app --reload --host 0.0.0.0 --port 8000"
